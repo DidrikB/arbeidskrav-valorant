@@ -6,12 +6,6 @@
             <p>Role: {{type}}</p>
             <p>Difficulty: {{difficulty}}</p>
 
-            <!-- <input @click="visInformasjon" type="button" value="More info">
-
-                <div v-if="lattis">
-                    <p>{{informasjon}}</p>
-                </div>  -->
-
         </article>
     </section>
 </template>
@@ -26,7 +20,6 @@ export default {
         title: String,
         type: String,
         difficulty: String,
-        informasjon: String
     },
     setup(props){
         const getImage = () =>{

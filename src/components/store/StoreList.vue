@@ -1,8 +1,7 @@
 <!--DIDRIKS KODER -->
 
 <template>
-    <input v-model="searchInput" type="text">
-    <input @click="searchFunction" type="button" value="search">
+    <store-search></store-search>
     <section class="row justify-content-center">
         <store-item
             v-for="(store, i) in storeItems" :key="i" 
@@ -17,17 +16,13 @@
 </template>
 
 <script>
-//import {ref} from 'vue'
 import StoreItem from "./StoreItem.vue"
+import StoreSearch from './StoreSearch.vue'
 import storeServices from "../../services/storeServices"
 
 export default {
 
     setup() {
-       
-       /* const searchInput = ref("")
-
-        const searchFunction = storeServices.filterItems(searchInput.value)*/
 
         const storeItems = storeServices.getAll(); 
 
@@ -35,7 +30,8 @@ export default {
     },
 
     components: {
-        StoreItem
+        StoreItem,
+        StoreSearch
     }
 }
 </script>

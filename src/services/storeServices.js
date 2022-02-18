@@ -15,13 +15,16 @@ const StoreService = ( function(){
 
     const getAll = () => storeItems
 
+    //const getType = () => storeItems.type
+
     const filterItems = (searchInput) => {
         storeItems.value.filter( searchInput )
     }
 
     return {
         getAll,
-        filterItems
+        filterItems,
+        
     }
 
 } () )

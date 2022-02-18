@@ -4,7 +4,7 @@ import {ref} from 'vue'
 const AgentService = (function(){
 
     const agentsInfo = ref([
-        {title: "Sova", type: "Initiator", difficulty: "medium", image:"sova.png", informasjon:"LOL"},
+        {title: "Sova", type: "Initiator", difficulty: "medium", image:"sova.png"},
         {title: "Phoenix", type: "Duelist", difficulty:"easy", image:"pheonix.png"},
         {title: "Viper", type: "Controller", difficulty: "hard", image:"viper.png"},
         {title: "Astra", type: "Controller",difficulty: "hard", image:"astra.png"},
@@ -26,10 +26,14 @@ const AgentService = (function(){
     ]);
     const getAlll = () => agentsInfo
 
+    const addAgent = (input) => {
+        agentsInfo.value.push(input)
+    }
+
     
 
     return {
-        getAlll,
+        getAlll, addAgent
 
     }
 }())

@@ -1,7 +1,9 @@
 <template>
     <section>
-       
-        <input @click="addAgent" type= "button" value="Add Agent">
+        <input v-model="addAgentTitle" type="text">
+        <input v-model="addAgentRole" type="text">
+        <input v-model="addAgentDifficulty" type="text">
+        <input @click="addAgentFunction" type= "button" value="Add Agent">
 
     </section>
 </template>
@@ -9,21 +11,24 @@
 <script>
 
 import {ref} from 'vue'
+import agentServices from'../../services/agentServices'
 export default {
     setup(){
-        const agents = ref([]);
-        const newAgent = ref("");
 
+        const addAgentTitle = ref("")
+        const addAgentRole = ref("")
+        const addAgentDifficulty = ref("")
 
-        const addAgent = () => {
-        var title = prompt("Legg til en ny agent")
-       
-        agents.value.push(title);
-        console.log(newAgent)
+        const addAgentFunction = () => agentServices.addAgent(addAgentTitle)
+        
 
-        // agents.value.push(newAgent.value);
+        return{
+            addAgentTitle, 
+            addAgentRole,
+            addAgentDifficulty,
+            addAgentFunction
         }
-        return {agents, addAgent,newAgent}
+
     }
 }
 </script>
