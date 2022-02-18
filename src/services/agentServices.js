@@ -22,8 +22,11 @@ const AgentService = (function(){
         {title: "Neon", type: "Duelist", difficulty: "hard", image:"neon.png"},
         {title: "Brimstone", type: "Controller", difficulty: "easy", image:"brim.png"},
         {title: "Sage", type: "Sentinel", difficulty: "easy", image:"sage.png"},
+       
     ]);
     const getAlll = () => agentsInfo
+
+    
 
     return {
         getAlll,

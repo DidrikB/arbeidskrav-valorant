@@ -1,7 +1,7 @@
 <template>
     <section>
-        <input v-model="newAgent" type="text">
-        <input @click="addAgent" type= "button" value="Add Agent" placeholder="Add a agent">
+       
+        <input @click="addAgent" type= "button" value="Add Agent">
 
     </section>
 </template>
@@ -14,9 +14,14 @@ export default {
         const agents = ref([]);
         const newAgent = ref("");
 
+
         const addAgent = () => {
-            alert("")
-           agents.value.push(newAgent.value);
+        var title = prompt("Legg til en ny agent")
+       
+        agents.value.push(title);
+        console.log(newAgent)
+
+        // agents.value.push(newAgent.value);
         }
         return {agents, addAgent,newAgent}
     }

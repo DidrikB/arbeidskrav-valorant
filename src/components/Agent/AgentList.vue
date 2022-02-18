@@ -1,6 +1,6 @@
 <template>
     <section class="row p-4">
- <add-agent></add-agent>
+        <add-agent></add-agent>
         <agent-store
         v-for="(agent, i) in agentStores" :key="i"
         :title="agent.title"
