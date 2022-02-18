@@ -1,3 +1,5 @@
+<!--DIDRIKS KODER -->
+
 <template>
     <section class="">
         <h1>Store</h1>

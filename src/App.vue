@@ -1,3 +1,4 @@
+<!--DIDRIKS KODER -->
 <template>
     <the-navigation></the-navigation>
     <div>
@@ -21,8 +22,5 @@ export default {
 
 
 <style>
-  img{
-    width: 500px;
-    height: 120px;
-  }
+
 </style>

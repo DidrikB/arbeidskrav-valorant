@@ -1,3 +1,5 @@
+//DIDRIKS KODER
+
 import { createRouter, createWebHistory } from 'vue-router'
 import AgentsPage from '../pages/AgentsPage.vue'
 import StorePage from '../pages/StorePage.vue'
